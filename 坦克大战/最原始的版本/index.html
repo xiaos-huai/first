@@ -1,0 +1,51 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-07-12 15:31:20
+ * @LastEditTime: 2020-07-12 17:35:12
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \小游戏\太空大战\index.html
+--> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      margin: 0;
+      padding:0;
+    }
+    .box{
+      height: 360px;
+      width: 400px;
+      background-color: black;
+      position :relative;
+      top: 10px;
+      left: 10px;
+    }
+    .my{
+      position: absolute;
+      height: 10px;
+      width: 10px;
+      box-sizing: border-box;
+      background-color: red;
+      border: 1px solid blue;
+    }
+    .item,div[class^= 'bullet']{
+      position: absolute;
+      height: 10px;
+      width: 10px;
+      box-sizing: border-box;
+      background-color: blue;
+      border: 1px solid red;
+    }
+  </style>
+</head>
+<body onload="init()">
+  <div class="box">
+  </div>
+</body>
+<script src="./index.js"></script>
+</html>

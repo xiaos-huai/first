@@ -1,0 +1,55 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-08-27 21:28:30
+ * @LastEditTime: 2020-08-28 09:25:28
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \静态网站（笔记）\拖放\index.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>拖放</title>
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <div class="container w">
+    <p>
+      拖进来一个图片，可以通过鼠标在内部拖放，也可以同过‘上下左右’四个键进行移动，安装shift键，在移动可以加快移动
+    </p>
+  </div>
+</body>
+<script src="index.js"></script>
+</html>
+<!-- 
+  拖放
+    文本，图片，连接，默认的都可以拖放，其他的元素默认的不可以拖放，
+    不过HTML5为元素新增了一个特性 draggable 当设置为true是此元素也可以拖放，（文本，图片，连接默认的就是true，其他的默认为false）
+
+    拖放事件
+      被拖的元素
+        dragstart：拖放开始
+        drag     ：移动 拖放进行中（鼠标还未抬起）（持续事件，会连续触发）
+        dragend  ：拖放停止（鼠标抬起来）
+    被拖的元素放入的那个元素  
+      dragenter ：进入容器当中
+      dragover  ：在容器当中移动（鼠标还未抬起）（持续事件，会连续触发）
+      dragleave ：移除容器（并未放在里面，到里面又出来了）
+      drop      ：在容器当中松开鼠标（鼠标抬起）（只有将dragover事件的默认行为取消，才会触发次事件）
+
+    dataTransfer对象，是实践对象event的一个属性，
+      有两个方法 setData（） 和 getData（） setdata用于保存信息 getData（）用于获取信息
+        有点像localStorage.setItem('div','<div>')和localStorage.getItem('div')
+          setData()接受连个参数，第一个为数据的类型，第二个为数据的值
+
+    dataTransfer中的其他属性
+          types : 以一个类似数组的集合的形式保存着，所保存数据的类型
+          e.dataTransfer.setDragImage(el,1,1)（在dragstart当中设置，当元素被拖动时，在鼠标的下面显示el，后面的连个参数是位置）
+          clearData('text/html')清除某一种类型的数据（在dragstart中调用）
+
+    拖入文件时（图片也是文件）信息在event.dataTransfer.files里
+          
+ -->

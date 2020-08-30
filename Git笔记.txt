@@ -1,0 +1,41 @@
+clear : 清空屏幕
+
+1.  cd 进入当前目录
+2.  配置git基本
+    git config --gloabl user.name "用户名"
+    git config --gloabl user.email "邮箱地址"
+      【注】 没有消息就是好消息
+3.  git init 在本地进行初始化 
+    .git文件
+4.  readme.md 文件项目的说明文件
+5.  工作区 =》站存区
+    git add 文件名
+    git add * 提交所有文件
+
+    git commit -m "提交信息（提交描述）" 提交到本地厂库
+6.  git status 查看文件是否提交
+
+7.  git checkout 文件名 （回复文件，从暂存区将文件回复到工作区）
+8.  git diff 查看那个文件修改了，哪里修改了（工作区和暂存区的区别）
+9.  git log 查看提交的历史记录
+10. git reset --hard HEAD^ 回退到上一个版本
+    git reset --hard 版本号  （回复到指定的版本）
+
+提交到远程厂库
+  1.生成ssh密匙
+    ssh-keygen -t rsa -C "你的GitHub邮箱地址"
+    我的电脑 》 用户 》 用户名文件夹 》 .ssh(隐藏文件) 》 xxx.pub文件
+  2.GitHub账户配置密匙
+  3.提交
+    git remote add origin 厂库地址 （设置提交的厂库地址）
+    git push -u origin master (提交)
+
+
+    git add *
+    git commit 
+    git push
+
+
+    git clone 厂库地址 （重远程厂库克隆项目到本地）
+
+    git pull 重远程厂库同步本地代码（更新）

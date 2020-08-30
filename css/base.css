@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-size: 16px;
+  color: #ffffff;
+  background-color: #06060b;
+}
+.w {
+  width: 1200px;
+  margin: 0 auto;
+}
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+h3 {
+  margin-bottom: 10px !important;
+}

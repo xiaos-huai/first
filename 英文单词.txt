@@ -1,0 +1,2 @@
+skip ：跳跃
+repository ：资料库、厂库

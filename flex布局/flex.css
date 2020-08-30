@@ -1,0 +1,40 @@
+
+.red {
+  color: red;
+}
+.green {
+  color: green;
+}
+.hr {
+  border-bottom: 1px solid #ffffff;
+}
+table {
+  width: 90%;
+  margin: 100px auto;
+}
+td,th {
+  width: 25%;
+  text-align: center;
+}
+tr {
+  height: 80px;
+}
+.head {
+  position: fixed;
+  top: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  height: 45px;
+  display: flex;
+  color: #000000;
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+.head div {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 45px;
+  flex: 1;
+}

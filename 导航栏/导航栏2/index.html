@@ -1,0 +1,92 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-08-26 16:31:22
+ * @LastEditTime: 2020-08-26 16:35:58
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \静态网站（笔记）\导航栏\导航栏2\index.html
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../../css/base.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      margin: 100px auto;
+      display: flex;
+      width: 1200px;
+      height: 45px;
+      background-color: rgb(45, 125, 131);
+    }
+    .container > div {
+      flex: 1;
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      overflow: hidden;
+      line-height: 45px;
+      color: #ffffff;
+      border-left: 1px solid #fff;
+    }
+    .item {
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      left: 0;
+      transform: translate(-50%,-50%);
+      border-radius: 50%;
+      background-color: rgb(165, 165, 165);
+      /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+      animation: my 1s;
+    }
+    @keyframes my {
+      0% {
+        width: 10px;
+        height: 10px;
+      }
+      70% {
+        width: 300px;
+        height: 300px;
+      }
+      100% {
+        background-color: transparent;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div>测试</div>
+    <div>测试</div>
+    <div>测试</div>
+    <div>测试</div>
+    <div>测试</div>
+    <div>测试</div>
+    <div>测试</div>
+    <div>测试</div>
+  </div>
+</body>
+<script>
+  let navs = document.querySelector('.container').children
+  for(let el of navs){
+    el.addEventListener('click',(event)=>{
+      let div = document.createElement('div');
+      div.className = 'item';
+      div.style.top = event.offsetY + 'px';
+      div.style.left = event.offsetX + 'px';
+      el.appendChild(div)
+      setTimeout(()=>{
+        event.target.removeChild(div)
+      },1000)
+    })
+  }
+</script>
+</html>

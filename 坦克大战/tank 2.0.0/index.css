@@ -1,0 +1,35 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.box{
+  width: 1200px;
+  height: 600px;
+  background: black;
+  margin: 50px auto;
+  position:relative;
+}
+.item{
+  height: 10px;
+  width: 10px;
+  box-sizing: border-box;
+  position: absolute;
+  border: 1px solid red;
+}
+.fire{
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  position: absolute;
+  background-color: white;
+  border: 0px;
+}
+.wall{
+  width: 10px;
+  height: 10px;
+  background: rgb(187, 187, 187);
+  position: absolute;
+  box-sizing: border-box;
+  border: 1px solid red;
+}
+

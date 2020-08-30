@@ -1,0 +1,36 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.box{
+  width: 1200px;
+  height: 600px;
+  background: black;
+  margin: auto;
+  position:relative;
+}
+.box > div{
+  height: 10px;
+  width: 10px;
+  box-sizing: border-box;
+  position: absolute;
+  border: 1px solid red;
+}
+.fire{
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  position: absolute;
+  background-color: white;
+}
+
+.a{
+  height: 100px;
+  width: 100px;
+  background: palegoldenrod;
+}
+.b{
+  /* visibility: hidden; */
+  /* display: hidden; */
+  display: none;
+}

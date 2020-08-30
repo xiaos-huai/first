@@ -1,0 +1,42 @@
+
+.container {
+  display: flex;
+  margin: 100px auto;
+}
+.container > .img {
+  flex: 1;
+  height: 320px;
+  transition: all .3s linear;
+  background-size: auto 320px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.container > .img:hover {
+  flex: 6;
+  background-position: center;
+  cursor: pointer;
+}
+.container > .img:nth-child(1) {
+  background-image: url(img/1.jpg);
+}
+.container > .img:nth-child(2) {
+  background-image: url(img/2.jpg);
+}
+.container > .img:nth-child(3) {
+  background-image: url(img/3.jpg);
+}
+.container > .img:nth-child(4) {
+  background-image: url(img/4.jpg);
+}
+.container > .img:nth-child(5) {
+  background-image: url(img/5.jpg);
+}
+.container > .img:nth-child(6) {
+  background-image: url(img/6.jpg);
+}
+.container > .img:nth-child(7) {
+  background-image: url(img/7.jpg);
+}
+.container > .img:nth-child(8) {
+  background-image: url(img/1.jpg);
+}

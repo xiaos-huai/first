@@ -1,0 +1,63 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-08-28 08:31:08
+ * @LastEditTime: 2020-08-28 09:01:39
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \静态网站（笔记）\拖放\note.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>拖放笔记</title>
+  <link rel="stylesheet" href="../css/base.css">
+  <style>
+    p {
+      line-height: 1.5em;
+      font-size: 20px;
+    }
+    .red {
+      color: red;
+    }
+    .yellow {
+      color: yellow;
+    }
+  </style>
+</head>
+<body>
+  <div class="container w">
+    <p>
+      HTML5使HTML支持原生的拖放操作，相比用js实现拖放（只能在页面中拖放），HTML更加的优秀，可以实现跨页面的拖放。
+    </p>
+    <p>
+      想要是元素能够被拖放，需要指定其特性draggable为true，默认情况下，图片，文本，URL的draggable都是true，而其他的元素默认为false
+    </p>
+    <h2>拖放中触发的事件</h2>
+    <p>
+      <dl>
+        <dt>被拖放的元素</dt>
+        <dd> <span class="red">dragstart</span> ：元素开始拖放</dd>
+        <dd> <span class="red">drag</span> ：元素拖放过程中（持续触发）（即使鼠标不动也会触发）</dd>
+        <dd> <span class="red">dragend</span> ：元素停止拖放（鼠标抬起）</dd>
+        <dt>当做容器的元素</dt>
+        <dd><span class="red">dragenter</span> ：被拖放的元素进入容器当中</dd>
+        <dd><span class="red">dragover</span> ：被拖放的元素在容器当中（同drag相似，是持续触发，即使鼠标不动）</dd>
+        <dd><span class="red">dragleave</span> ：被拖放的元素离开容器</dd>
+        <dd><span class="red">drop</span> ：被拖放的元素在容器中放下</dd>
+      </dl>
+    </p>
+    <h2>只是拖动没有数据的传递；也是没有意思的 datatransfer用于数据的传递</h2>
+    <p>datatransfer中有多个方法，setData()和getData()分别用于保存数据和读取数据<br>
+      <spna class="yellow">setData()</spna> 有连个参数，第一个是保存的数据的类型，第二个是保存的数据<br>
+      <span class="yellow">getData()</span> 有一个参数，要获取的数据的类型 setData()保存的数据只能在drop事件处理程序当中访问，若drop事件处理程序没有访问，则数据将会被销毁 <br>
+      <span class="yellow">clearDate()</span> 清除以特定格式保存的数据，只有一个参数就是要清楚的数据的格式<br>
+      <span class="yellow">setDragImage(element,x,y)</span> 指定一个元素，在拖动时显示在鼠标的下方，x，y为位置参数，没有单位<br>
+      <span class="yellow">types</span> :当前保存的数据的类型，以一个类似于数组的集合的方式保存着数据的类型<br>
+      在拖动文本和URL时，默认的会调用setData方法，拖动文本时，将选中的文本以‘text/plain’的形式保存起来<br>
+      拖动URL是以‘text/uri-list’(不同的浏览器保存的类型可能不同，到时候在查一下)
+    </p>
+  </div>
+</body>
+</html>
